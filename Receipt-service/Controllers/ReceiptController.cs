@@ -61,10 +61,7 @@ namespace Receipt_service.Controllers
                 return NotFound();
             }
 
-            lock (_locker)
-            {
-                return Ok(receipt);
-            }
+            return Ok(receipt);
         }
 
         [HttpDelete]
